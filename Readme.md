@@ -161,6 +161,10 @@ When a transfer is initiated, it comes with a status ```NEW``` this means the tr
 
 * ```.bulk()```
 
+* ```.retry()```
+
+* ```.getRetry()```
+
 * ```.fetch()```
 
 * ```.list()```
@@ -169,6 +173,7 @@ When a transfer is initiated, it comes with a status ```NEW``` this means the tr
 
 * ```.getBalance()```
 
+* ```.walletTransfer()```
 <br>
 
 ### ```.initiate()```
@@ -298,6 +303,79 @@ A sample response is:
   }
 }
 ```
+### ```.retry()```
+This allows you retry a failed transfer attempt.
+
+
+```javascript
+const Ravepay = require('flutterwave-node');
+
+const rave = new Ravepay(PUBLICK_KEY, SECRET_KEY,  PRODUCTION_FLAG);
+
+const TransferRetry = async () => {
+    try {
+        const payload ={
+            "id": "171219"
+          }
+        const response = await rave.Transfer.retry(payload)
+        console.log(response)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+TransferRetry();
+```
+#### Returns
+
+A sample response is:
+
+```javascript
+ {
+    id: 171221,
+    account_number: '0690000044',
+    bank_code: '044',
+    fullname: 'Ade Bond',
+    date_created: '2021-02-28T20:44:03.000Z',
+    currency: 'NGN',
+    amount: 500,
+    fee: 10.75,
+    status: 'NEW',
+    reference: 'mk-9083es7-j__PMCK_ST_FDU_1_RETRY_2',
+    meta: null,
+    narration: 'LOVE ME',
+    complete_message: '',
+    requires_approval: 0,
+    is_approved: 1,
+    bank_name: 'ACCESS BANK NIGERIA'
+  }
+```
+
+### ```.getRetry()```
+This allows you to retrieve all retries for a single transfer.
+
+
+```javascript
+const Ravepay = require('flutterwave-node');
+
+const rave = new Ravepay(PUBLICK_KEY, SECRET_KEY,  PRODUCTION_FLAG);
+
+const getTransferRetry = async () => {
+    try {
+        const payload ={
+            "id": "171219"
+          }
+        const response = await rave.Transfer.getRetry(payload)
+        console.log(response)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+getTransferRetry();
+
+```
+
 
 ### ```.fetch()```
 This allows you retrieve a single transfer.
@@ -444,7 +522,61 @@ A sample response is:
   }
 }
 ```
+### ```.wallet()```
+This allows you to initiate a transfer from one Flutterwave wallet to another.
 
+
+```javascript
+const Ravepay = require('flutterwave-node');
+
+const rave = new Ravepay(PUBLICK_KEY, SECRET_KEY,  PRODUCTION_FLAG);
+
+const walletTransfer = async () => {
+    try {
+        const payload ={
+                "merchant_id": "00685246",
+                "amount": 1000,
+                "currency": "NGN"
+              
+          }
+        const response = await rave.Transfer.wallet(payload)
+        console.log(response)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+walletTransfer();
+
+```
+
+#### Returns
+
+A sample response is:
+
+```javascript
+{
+  status: 'success',
+  message: 'Transfer created successfully',  
+  data: {
+    id: 171224,
+    account_number: 9726614,
+    bank_code: 'wallet',
+    fullname: 'businesslist.africa',
+    date_created: '2021-02-28T22:08:32.000Z',
+    currency: 'NGN',
+    amount: 1000,
+    fee: 0,
+    status: 'NEW',
+    reference: '4c4c35bfbc1d0269',
+    meta: { AccountId: 685246, merchant_id: '00685246' },
+    complete_message: '',
+    requires_approval: 0,
+    is_approved: 1,
+    bank_name: 'wallet'
+  }
+}
+```
 
 ### Subaccounts
 
