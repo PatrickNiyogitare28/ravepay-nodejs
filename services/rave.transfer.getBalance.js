@@ -1,5 +1,4 @@
 var morx = require('morx');
-var charge = require('./rave.charge');
 var q = require('q');
 const axios = require('axios');
 const package = require('../package.json');
@@ -25,13 +24,13 @@ function service(data, _rave){
 
         var validated = morx.validate(data, spec, _rave.MORX_DEFAULT);
         var params = validated.params;
-        _rave.params = params
-        return  (_rave);
+        return  (params);
 
     })
-    .then((_rave) => {
-        _rave.params.seckey = _rave.getSecretKey();  
-        return _rave.request('v2/gpx/balance', _rave.params)
+    .then((params) => {
+        params.secret_key = _rave.getSecretKey(); 
+        params.method = "POST";
+        return _rave.request('v2/gpx/balance', params)
     })
     .then( resp => {
 
