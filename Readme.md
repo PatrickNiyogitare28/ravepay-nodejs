@@ -1757,7 +1757,6 @@ List all settlements made to your bank account and your subaccounts.
 ```javascript
 
 const Ravepay = require('flutterwave-node');
-
 const pubkey = "FLWPUBK_TEST-xxxxxxxxxx";
 const seckey = "FLWSECK_TEST-xxxxxxx";
 const rave = new Ravepay(pubkey, seckey, false);
