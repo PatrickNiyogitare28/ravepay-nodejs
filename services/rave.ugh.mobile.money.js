@@ -6,7 +6,7 @@ const package = require('../package.json');
 
 
 var spec = morx.spec()
-    .build('PBFPubKey', 'required:false, eg:FLWPUBK-e634d14d9ded04eaf05d5b63a0a06d2f-X')
+    .build('PBFPubKey', 'required:false, eg:FLWPUBK-xxxxxxxxxxxxxxxxxxxxx-X')
     .build('currency', 'required:true, eg:UGX')
     .build('country', 'required:true, eg:NG')
     .build('payment_type', 'required:true, eg:mobilemoneyuganda')
