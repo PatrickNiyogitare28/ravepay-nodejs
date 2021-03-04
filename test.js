@@ -1,11 +1,12 @@
 var Rave = require('./');
 var request = require('request');
-
-var rave = new Rave('FLWPUBK-8cd258c49f38e05292e5472b2b15906e-X', 'FLWSECK-c51891678d48c39eff3701ff686bdb69-X', false);
+var public_key = process.env.PUBLIC_KEY;
+var secret_key = process.env.SECRET_KEY;
+var ravebase = new Rave(public_key, secret_key, false);
 
 var payload = {
     "ref": "FLW-MOCK-f129ce9ac1fe993091795ce08c43fb9b",
-    "seckey": "FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X"
+    "seckey": "secret_key"
 }
 
 var payload2 = {
