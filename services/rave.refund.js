@@ -7,7 +7,7 @@ var spec = morx.spec()
 
     .build('ref', 'required:true, eg:FLWACHMOCK-1527583529027')
     .build('amount', 'required:false, eg:100')
-    .build('seckey', 'required:false, eg:FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X')
+    .build('seckey', 'required:false, eg:FLWSECK-xxxxxxxxxxxxxxxxxxxxx-X')
 
     .end();
 
