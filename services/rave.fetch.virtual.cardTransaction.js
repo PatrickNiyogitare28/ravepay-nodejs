@@ -11,7 +11,6 @@ var spec = morx.spec()
     .build('PageIndex', 'required:true, eg:0')
     .build('PageSize', 'required:true, eg:20')
     .build('CardId', 'required:true, eg:105c55f1-b69f-4915-b8e1-d2f645cd9955')
-    // .build('secret_key', 'required:true, eg:FLWSECK_TEST-624d8f04393b01cac90d02f562b26389-X')
     .end();
 
 function service(data, _rave) {

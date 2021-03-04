@@ -73,13 +73,13 @@ describe("#Rave Card Charge Test", function(){
                 "pin": "7552",
                 "suggested_auth": "PIN",
                 "country": "NG",
-                "amount": "10",
+                "amount": "90000",
                 "email": "",
                 "phonenumber": "08056552980",
-                "firstname": "temi",
-                "lastname": "desola",
+                "firstname": "Flutterwave",
+                "lastname": "Developers",
                 "IP": "355426087298442",
-                "txRef": "MC-7663-YU",
+                "txRef": "MC-Sept-30",
                 "device_fingerprint": "69e6b7f0b72037aa8428b70fbe03986c"
             } 
 

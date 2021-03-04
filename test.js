@@ -2,7 +2,7 @@ var Rave = require('./');
 var request = require('request');
 var public_key = process.env.PUBLIC_KEY;
 var secret_key = process.env.SECRET_KEY;
-var ravebase = new Rave(public_key, secret_key, false);
+var rave = new Rave(public_key, secret_key, false);
 
 var payload = {
     "ref": "FLW-MOCK-f129ce9ac1fe993091795ce08c43fb9b",

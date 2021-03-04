@@ -5,7 +5,7 @@ const axios = require('axios');
 
 
 var spec = morx.spec()
-    .build('seckey', 'required:true, eg:FLWSECK_TEST-9e54889bc262062ffg6654a96152ce4f477f9-X')
+    .build('seckey', 'required:true, eg:FLWSECK_TEST-9xxxxxx-X')
     .build('from', 'required:false, eg:2019:01:01')
     .build('to', 'required:false, eg:2019:01:01')
     .build('page', 'required:false, eg:20')
