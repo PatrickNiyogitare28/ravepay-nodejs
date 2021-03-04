@@ -185,7 +185,7 @@ This is called to start a transfer. The payload should contain the following car
 
 * ```'amount', 'required:true, eg:10'```, 
 
-* ```'secKey', 'required:true,eg:FLWSECK-e6db11d1f8a6208de8cb2f94e293450e-X'```, 
+* ```'secKey', 'required:true,eg:FLWSECK-xxxxxxxxxxx-X'```, 
 
 * ```'narration', 'required:false,eg:New transfer'```, 
 
@@ -252,7 +252,7 @@ This allows you send bulk transfers.
 
 
 ```javascript
-const Ravepay = require('flutterwave-node';
+const Ravepay = require('flutterwave-node');
 
 const rave = new Ravepay(PUBLICK_KEY, SECRET_KEY,  PRODUCTION_FLAG);
 
@@ -382,7 +382,7 @@ This allows you retrieve a single transfer.
 It uses a GET method.
 
 ```javascript
-const Ravepay = require('flutterwave-node';
+const Ravepay = require('flutterwave-node');
 
 const rave = new Ravepay(PUBLICK_KEY, SECRET_KEY,  PRODUCTION_FLAG);
 
@@ -440,7 +440,7 @@ A sample response is:
 This allows you fetch all transfers using a GET method
 
 ```javascript
-const Ravepay = require('flutterwave-node';
+const Ravepay = require('flutterwave-node');
 
 const rave = new Ravepay(PUBLICK_KEY, SECRET_KEY,  PRODUCTION_FLAG);
 
@@ -465,7 +465,7 @@ listTransfer();
 This retrieves the fee for a transfer
 
 ```javascript
-const Ravepay = require('flutterwave-node';
+const Ravepay = require('flutterwave-node');
 
 const rave = new Ravepay(PUBLICK_KEY, SECRET_KEY,  PRODUCTION_FLAG);
 
@@ -490,7 +490,7 @@ getFee();
 This helps you get your balance for transfers.
 
 ```javascript
-const Ravepay = require('flutterwave-node';
+const Ravepay = require('flutterwave-node');
 
 const rave = new Ravepay(PUBLICK_KEY, SECRET_KEY, PRODUCTION_FLAG);
 
