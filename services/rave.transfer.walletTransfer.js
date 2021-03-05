@@ -6,9 +6,9 @@ const package = require('../package.json');
 //This allows you to initiate a transfer from one flutterwave wallet to another
 
 var spec =  morx.spec()
-                .build('amount', 'required:required, eg:10')
-                .build('currency', 'required:required,eg:NGN')
-                .build('merchant_id', 'required:required,eg:1547282')
+                .build('amount', 'required:true, eg:10')
+                .build('currency', 'required:true,eg:NGN')
+                .build('merchant_id', 'required:true,eg:1547282')
                 .end();
                 
 
