@@ -6,7 +6,7 @@ const axios = require('axios');
 //This helps you to retry a failed transfer attempt
 
 var spec =  morx.spec()
-                .build('id', 'required:required,eg:167472')
+                .build('id', 'required:true,eg:167472')
                 .end();
 
 

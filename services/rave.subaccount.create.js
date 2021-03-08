@@ -9,11 +9,13 @@ var spec =  morx.spec()
 				.build('account_number', 'required:true,validators:isNumeric, eg:06900021')
                 .build('business_name', 'required:true, eg:JK Services')
                 .build('business_email', 'required:true, eg:e.ikedieze@gmail.com')
-                .build('business_contact', 'required:true, eg:Ikedieze Ndukwe')
-                .build('business_contact_mobile', 'required:true, eg:08174111222')
+                .build('business_contact', 'required:false, eg:Ikedieze Ndukwe')
+                .build('business_contact_mobile', 'required:false, eg:08174111222')
 				.build('business_mobile', 'required:false,eg:08030930236')
+				.build('split_type', 'required:false, eg:percentage')
+				.build('split_value', 'required:false, eg:0.98')
 				.build('meta', 'required:required,eg:[{"metaname": "MarketplaceID", "metavalue": "ggs-920900"}]')
-				.build('country', 'required:false')
+				.build('country', 'required:true')
                 .end();
                 
 
