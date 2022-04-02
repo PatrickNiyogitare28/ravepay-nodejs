@@ -41,7 +41,6 @@ For more information on the services listed above, visit the [Ravepay website](h
  You can get your PUBLICK_KEY and SECRET_KEY from the Rave dashboard. 
 
  Go [here](https://rave.flutterwave.com/dashboard/settings/apis) to get your live keys.
- Go [here](https://rave.flutterwave.com/dashboard/settings/apis) to get your live keys.
 
  
 ```
